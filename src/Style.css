@@ -1,0 +1,96 @@
+span {
+  color: rgb(2, 119, 244);
+  font-family: cursive;
+}
+
+.squadbutton {
+  transition: transform 0.3s ease; /* Add a smooth transition for the transform property */
+}
+
+.squadbutton:hover {
+  transform: scale(
+    1.05
+  ); /* Scale up the div slightly on hover (you can adjust the value for the desired expansion) */
+  box-shadow: 2px 2px 15px rgb(2, 119, 244); /* Add a more pronounced box shadow on hover */
+  opacity: 0.9;
+}
+
+/* RotatingIconButton.css */
+@keyframes rotateOnHover {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-icon {
+  transition: transform 0.3s ease;
+}
+
+.rotating-icon-button:hover .rotating-icon {
+  animation: rotateOnHover 1s linear infinite; /* Apply the animation on hover */
+}
+
+/* --------- */
+/*Scrollbar   */
+/* --------- */
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(245, 241, 241);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(240, 239, 239);
+  border-radius: 3px;
+}
+
+/* --------- */
+/*Edit   */
+/* --------- */
+
+.slide-in-textfield {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInAnimation 0.9s forwards;
+}
+
+.slide-in-textfield label.Mui-focused {
+  box-shadow: none; /* Remove box shadow for the label when focused */
+}
+
+@keyframes slideInAnimation {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes dancingAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.dancing-box {
+  animation: dancingAnimation 1s infinite;
+}
